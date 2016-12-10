@@ -1,0 +1,45 @@
+.no-padding
+  padding: 0
+
+@mixin display-flex
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin box-shadow
+  -webkit-box-shadow: 4px 6px 14px -2px rgba(128,126,128,1)
+  -moz-box-shadow: 4px 6px 14px -2px rgba(128,126,128,1)
+  box-shadow: 4px 6px 14px -2px rgba(128,126,128,1)
+
+.topper
+  height: 10px
+  background: rgba(255, 255, 255, .5)
+  border: 1px solid #FFF
+  border-bottom: 0
+
+.answer
+  background: #FFF
+  height: 100px
+  max-width: 280px
+  @include box-shadow
+  .display-calculation
+    height: 20px
+    text-align: right
+
+.background
+  background-image: url(cal.jpg)
+  background-size: cover
+  height: 100vh
+  &.wrapper
+    @include display-flex
+    flex-direction: column
+    .calc
+      min-width: 300px
+      max-width: 700px
+      .box
+        background: rgba(255,255,255,.5)
+        border: 1px solid #FFF
+        min-height: 50px
+        font-size: 22px
+        cursor: pointer
+        @include display-flex

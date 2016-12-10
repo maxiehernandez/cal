@@ -1,0 +1,36 @@
+<div class="wrapper background">
+  <div class="topper col-sm-2"></div>
+    <div class="col-sm-3 answer">
+      <div class="display-calculation col-xs-12 no-padding"></div>
+    </div>
+    <div class="calc">
+      <div class="col-sm-offset-4 col-sm-1 no-padding">
+        <% ["C", "7", "4", "1", "0"].each do |c| %>
+          <div class="col-xs-12 text-center box" data-type="<%= c %>">
+           <%= c %>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-sm-1 no-padding">
+        <% ["+/-", "8", "5", "2", "."].each do |c| %>
+          <div class="col-xs-12 text-center box" data-type="<%= c %>">
+            <%= c %>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-sm-1 no-padding">
+        <% ["^", "9", "6", "3", "="].each do |c| %>
+          <div class="col-xs-12 text-center box" data-type="<%= c %>">
+            <%= c %>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-sm-1 no-padding">
+        <% ["√", "/", "x", "-", "+"].each do |c| %>
+          <div class="col-xs-12 text-center box" data-type="<%= c %>">
+            <%= c %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>
