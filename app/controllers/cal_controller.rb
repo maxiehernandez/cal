@@ -1,12 +1,12 @@
 class CalController < ApplicationController
+
   def index
   end
 
   def calculation
-    calculator = Dentaku::Calculator.new
-    result = calculator.evalulate('2+2')
+    calc = Dentaku::Calculator.new
     respond_to do |format|
-      format.json { render :json => {result: result} }
+      format.json { render :json => { result: calc.evaluate(params[:values]) } }
     end
   end
 
