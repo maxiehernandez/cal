@@ -17,12 +17,17 @@ $( document ).ready(function() {
         $(".final-answer").empty()
         break;
       case '=':
+      if ($(".display-calculation").text().includes("√")) {
+        calculation = $('.display-calculation').text().replace('√', 'sqrt(' + $('.display-calculation').text().replace('√', "") + ')').split(")")[0] + ")"
+      }else {
+        calculation = $('.display-calculation').text().replace("x", "*")
+      }
         $.ajax({
           method: "GET",
           url: "/calculation",
           dataType: "json",
           data: {
-            values: $('.display-calculation').text().replace("x", "*")
+            values: calculation
           }
         })
         .done(function(data){
@@ -33,6 +38,7 @@ $( document ).ready(function() {
         break;
     }
   })
+
 });
 
 function generateRandomString(){

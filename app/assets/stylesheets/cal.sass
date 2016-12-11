@@ -22,6 +22,7 @@ body
 
 .answer
   background: linear-gradient(#FFF, #eeeeee)
+  overflow: scroll
 
   height: 100px
   max-width: 280px
@@ -47,3 +48,13 @@ body
         font-size: 22px
         cursor: pointer
         @include display-flex
+
+.history-container
+  height: 300px
+  overflow: auto
+  border-radius: 3px
+  box-shadow: 1px 1px 10px #bdbdbd
+  // min-width: 100px
+  // background: rgba(255,255,255,.5)
+  // border: 1px solid #FFF
+  // @include display-flex
