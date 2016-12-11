@@ -1,9 +1,14 @@
 $( document ).ready(function() {
+  var count = 0;
   for (var key in sessionStorage){
-   $('.last-calculations').append(
-    '<p>' +
-      sessionStorage.getItem(key) +
-    '</p>')
+    count += 1;
+    if (count >= 11) {
+      break;
+    }
+    $('.last-calculations').append(
+     '<p>' +
+       sessionStorage.getItem(key) +
+     '</p>')
   }
   $(document).on('click', ".box", function(){
     $(".final-answer").empty()
