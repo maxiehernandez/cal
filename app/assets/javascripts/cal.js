@@ -1,15 +1,13 @@
 $( document ).ready(function() {
-  var count = 0;
-  for (var key in sessionStorage){
-    count += 1;
-    if (count >= 11) {
+  var sessionKeys = Object.keys(sessionStorage).sort().reverse()
+  for (var i = 0; i < sessionKeys.length; i++) {
+    if (i > 9) {
       break;
     }
-    $('.last-calculations').append(
-     '<p>' +
-       sessionStorage.getItem(key) +
-     '</p>')
+    var key = sessionKeys[i];
+    $('.last-calculations').append('<p>' + sessionStorage.getItem(key) + '</p>')
   }
+
   $(document).on('click', ".box", function(){
     $(".final-answer").empty()
     var type = $(this).data().type
@@ -36,16 +34,18 @@ $( document ).ready(function() {
           }
         })
         .done(function(data){
-          sessionStorage.setItem(generateRandomString(), $('.display-calculation').text());
+          var sessionKeys = Object.keys(sessionStorage);
+          if (sessionKeys.length === 10 ) {
+            sessionKeys.pop();
+          }
+          if (sessionKeys.length < 10 ) {
+            sessionStorage.setItem(Date.now(), $('.display-calculation').text());
+          }
           $(".final-answer").html(data.result);
           $('.display-calculation').empty();
-        })
+        });
         break;
     }
   })
 
 });
-
-function generateRandomString(){
-  return Math.random().toString(36).substring(8);
-}
