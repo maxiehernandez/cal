@@ -37,3 +37,20 @@
           <li>^ (exponentiation)</li>
           <li>√ (square root)</li>
         </ul>
+
+
+<br>
+
+![cal](https://cloud.githubusercontent.com/assets/19826509/21126240/0520e4b6-c0b9-11e6-8b04-c6d23553b359.png)
+
+<br>
+
+
+![cal_2](https://cloud.githubusercontent.com/assets/19826509/21126249/1803f8a2-c0b9-11e6-85bf-52e601b2054f.png)
+
+
+<br>
+
+![cal_3](https://cloud.githubusercontent.com/assets/19826509/21126262/2dee7eda-c0b9-11e6-9e88-a597d5049732.png)
+
+<br>
