@@ -37,4 +37,3 @@
           <li>^ (exponentiation)</li>
           <li>√ (square root)</li>
         </ul>
-    </ul>
