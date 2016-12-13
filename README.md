@@ -33,10 +33,10 @@
         <li>^ (exponentiation)</li>
         <li>√ (square root)</li>
       </ul>
-      
+    </ul>
      <li>Stores the last 10 calculations performed by the user to the browser session</li>
      <li>Append any of the last 10 calculations back into the calculator to recalculate</li>
      <li>Handles arbitrary precision floats</li>
      <li>Calculations happen live in the browser window</li>
-    </ul>
+    
   </ul>
